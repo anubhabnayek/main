@@ -83,13 +83,13 @@
                           <ul id="navigation">
                            <li><a href="#">user<i class="ti-angle-down"></i></a>
 						    <ul class="submenu">
-							  @if (session()->has('userid'))
+							@if (session()->has('userid'))
 							<li><a href="profile">profile</a></li>
 							<li><a href="logout">logout</a></li>
-							@else
+							 @else
 							<li><a href="signup">signup</a></li>
 							<li><a href="signin">login</a></li>
-							@endif
+							 @endif
 						</ul>
 						</ul>
 					     </nav>

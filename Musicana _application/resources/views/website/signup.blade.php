@@ -27,7 +27,7 @@
           <h2 class="contact-title text-center">Registration</h2>
         </div>
         <div class="col-lg-12">
-          <form class="form-contact contact_form" action="{{url('/signup')}}" method="post" id="contactForm" enctype= multipart/form-data>
+          <form class="form" action="{{url('/signup')}}" method="post" id="userRegistrationForm" enctype= multipart/form-data>
           @csrf
           <div class="row">
 			  <div class="col-lg-2"></div>
@@ -114,7 +114,7 @@
             </div>
                </div>
             <div class="form-group mt-3 text-center">
-              <button type="submit" class="button button-userregisterForm btn_4 boxed-btn "class="btn btn-primary">Register</button>
+              <button type="submit" name="submit" class="button button-userregisterForm btn_4 boxed-btn "class="btn btn-primary">Register</button>
             </div>
           </form>
         </div>
@@ -129,39 +129,7 @@
   @endsection
   <!-- ================ contact section end ================= -->
 
-    <!-- footer start -->
-    
-    <!--/ footer end  -->
-
-
-  <!-- JS here -->
-  <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-  <script src="js/vendor/jquery-1.12.4.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/ajax-form.js"></script>
-  <script src="js/waypoints.min.js"></script>
-  <script src="js/jquery.counterup.min.js"></script>
-  <script src="js/imagesloaded.pkgd.min.js"></script>
-  <script src="js/scrollIt.js"></script>
-  <script src="js/jquery.scrollUp.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/nice-select.min.js"></script>
-  <script src="js/jquery.slicknav.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/gijgo.min.js"></script>
-
-  <!--contact js-->
-  <script src="js/contact.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/jquery.form.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/mail-script.js"></script>
-
-  <script src="js/main.js"></script>
+   
 </body>
 
 </html>

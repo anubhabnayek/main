@@ -39,8 +39,8 @@ class userController extends Controller
     {
 		$validated = $request->validate([
 				
-			'username' => 'required',
-			'password' => 'required|max:8|max:12',]);
+		'username' => 'required',
+		'password' => 'required|max:8|max:12',]);
 		$data=user::where('username','=',$request->username)->first();
         if($data){
 		   if(Hash::check($request->password,$data->password))
@@ -76,33 +76,33 @@ class userController extends Controller
 			'language' => ['required', new LanguageValidationRule],		
 		]);	
 
-        $data=new user;
-		$data->name=$request->name;
-		$data->email=$request->email;
-	    $data->username=$request->username;
+			$data=new user;
+			$data->name=$request->name;
+			$data->email=$request->email;
+			$data->username=$request->username;
 
-		$data->password=Hash::make($request->password);
-		$data->gender=$request->gender;
-		$data->phone=$request->phone;
-		$data->language=implode(",",$request->language); // string convert
-		
-		$file=$request->file('file');
-		
-		$filename=time().'_img.'.$request->file('file')->getClientOriginalExtension(); // 545646545_img.png
-		$file->move('upload/user/',$filename);
-		$data->file=$filename;
-		
-	    
-		
-		//$file=
-		
-		$data->save();
-		/*$maildata=array("nameemail"=>$nameemail,"email"=>$email);
-		Mail::to($email)->send(new signupemail($maildata));*/	
-		
-	    Alert::success('Congrats', 'You\'ve Successfully Registered');
+			$data->password=Hash::make($request->password);
+			$data->gender=$request->gender;
+			$data->phone=$request->phone;
+			$data->language=implode(",",$request->language); // string convert
+			
+			$file=$request->file('file');
+			
+			$filename=time().'_img.'.$request->file('file')->getClientOriginalExtension(); // 545646545_img.png
+			$file->move('upload/user/',$filename);
+			$data->file=$filename;
+			
+			
+			
+			//$file=
+			
+			$data->save();
+			/*$maildata=array("nameemail"=>$nameemail,"email"=>$email);
+			Mail::to($email)->send(new signupemail($maildata));*/	
+			
+			Alert::success('Congrats', 'You\'ve Successfully Registered');
 
-		return back();
+			return back();
 		
     }
 

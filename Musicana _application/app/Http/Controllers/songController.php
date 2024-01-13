@@ -29,12 +29,12 @@ class songController extends Controller
      */
     public function store(Request $request)
     {
-      $validated = $request->validate([
+      /*$validated = $request->validate([
             'songs_name' => 'required|unique:songcategories',
             'file' => 'required|image',
             'song' => 'required|mimes:application/octet-stream,audio/mpeg,mpga,mp3,wav',
 			'song_category' => 'required'
-        ]);
+        ]);*/
 		
         $data=new song();
 		$data->songs_name=$request->songs_name;
